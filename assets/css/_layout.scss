@@ -1,0 +1,563 @@
+// ========================
+/******** LAYOUT ********/
+// ========================
+
+@font-face {
+    font-family: 'BrooklynSamuelsFive-Bold';
+    src: url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.eot');
+    src: url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.woff2') format('woff2'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.woff') format('woff'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.ttf') format('truetype'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-bold-webfont.svg#brooklyn_samuelsno5_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrooklynSamuelsFive-Fat';
+    src: url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.eot');
+    src: url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.woff2') format('woff2'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.woff') format('woff'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.ttf') format('truetype'),
+         url('../fonts/samuelstype_-_brooklynsamuelsfive-fat-webfont.svg#brooklyn_samuelsno5_fat') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon_reg';
+    src: url('../fonts/brandon_reg-webfont.eot');
+    src: url('../fonts/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon_reg-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_reg-webfont.woff') format('woff'),
+         url('../fonts/brandon_reg-webfont.ttf') format('truetype'),
+         url('../fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open_Sans_Regular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/Gotham-Light.eot');
+    src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Gotham-Light.woff') format('woff2'),
+         url('../fonts/Gotham-Light.woff') format('woff'),
+         url('../fonts/Gotham-Light.otf'),
+         url('../fonts/Gotham-Light.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/Gotham-Medium.eot');
+    src: local('☺'), url('../fonts/Gotham-Medium.woff') format('woff'), 
+            url('../fonts/Gotham-Medium.ttf') format('truetype'), 
+            url('../fonts/Gotham-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+}
+
+input[type=number] {
+         -moz-appearance:textfield;
+}
+
+//barra de scroll navegador 
+/*::-webkit-scrollbar {//fondo
+    background-color: rgba(#FFFFFF,.18);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{//barra
+
+     background-color: rgba(#FFFFFF,.45);
+     width: 10px;
+}
+.navbar-collapse {
+
+     background-color: #d1d1d1;
+     width: 10px;
+}*/
+
+
+body {
+    background: #3D5927 url("../images/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+$verde : #78AC7A;;
+
+
+.contenedor {
+    width: 100%;
+    margin: 0 auto 40px auto;
+    position: relative;
+    display: table;
+    padding-bottom:150px;
+}
+
+.contenedor-body {
+    min-height: 500px;
+}
+
+.inactivo {
+            opacity: .5;
+}
+
+ .contenidoGeneral{
+        padding: 170px 0 !important;
+}
+
+.head {
+            height: 170px;
+            background-color: rgba(#008D45, .6);
+
+   	 img {
+		margin: 38px auto;
+		display: block;
+	}
+
+            .block{
+                        float: right;
+                        position: absolute;
+                        right: 0;
+                        top: 20px;
+
+                        select{
+                                color: #fff;
+                                font-family: 'BrooklynSamuelsFive-Bold';
+                                background-color: $verde;
+                                border: none;
+                                box-shadow: none;
+                                background-image: url('../images/background-select2.png');
+                                background-size: 100% 80%;
+                                background-repeat: no-repeat;
+                                background-position-x: 0;
+                                background-position-y: bottom;
+                                direction: rtl;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                padding-right:20px;
+                        }
+
+                        .option {
+                                padding:10px !important;
+                        }
+
+                        .icon-select {
+                                position: absolute;
+                                right: 0;
+                                top: 5px;
+                        }
+            }
+
+            .contenedor {
+                    min-height: 0px;
+            }
+
+             .logout {
+                        float: right;
+                        padding-top:10px;
+                        cursor: pointer;
+                    
+                        p{
+                                    color: #fff;
+                                    float: left;
+                                    font-family: 'BrooklynSamuelsFive-Bold';
+                                    font-size: 11px;
+                                    padding-top: 2px;
+                                    padding-right:5px;
+                         }
+
+                         img{
+                                    float: left;
+                         }
+
+                         &:hover{
+                                opacity: .5;
+                         }
+            }
+}
+
+.centrado{
+    margin: 0 auto;
+}
+
+.oculto{
+        display: none;
+}
+
+
+
+.footer {
+    height: 130px;
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    img {
+	    margin-top: 15px;
+	    width: 260px;
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 30px;
+	}
+}
+
+
+.base{
+            width: 100%;
+            float: left;
+            background-color: rgba(0, 0, 0, 0.6);
+            -moz-background-color: rgba(0, 0, 0, 0.6);
+            -webkit-background-color: rgba(0, 0, 0, 0.6);
+            -o-background-color: rgba(0, 0, 0, 0.6);
+            -ms-background-color: rgba(0, 0, 0, 0.6);
+
+            .contenido{
+                        min-height: 500px; 
+                        width: 840px;
+                        float: left;
+                        position: relative;
+                        left: 50%;
+                        margin-left: -420px;
+                        display: block;
+                        padding: 70px 0;
+            }
+
+            .columnasTitulo{
+
+                     .titulo{
+                                width: 100%;
+                                float: left;
+                                padding: 20px 20px 20px 0px;
+                                box-sizing: border-box;
+                                border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+                             h3{
+                                    border-left: 2px solid #fff;
+                                    font-size: 27px;
+                                    height: 57px;
+                                    line-height: 30px;
+                                    color: #fff;
+                                    padding-left:10px;
+                                    font-family: 'BrooklynSamuelsFive-Fat';
+                                    margin-bottom: 20px;
+                                    opacity: .5;
+
+
+                                            span{
+                                                    font-size: 34px;
+                                            }
+
+                                            .de{
+                                                font-size: 20px;
+                                                position: relative;
+                                                top: -10px;
+                                            }
+                                }
+                     }
+
+                     .activo{
+                                border: none;
+
+                                h3{
+                                    opacity: 1;
+                                }
+                    }
+
+
+                     .block-icon{
+                                width: 100%;
+                                float: left;
+                                margin: 1px 0;
+                                height: 33px;
+                                cursor:pointer;
+
+                                .text{
+                                    float: left;
+                                    font-family: 'BrooklynSamuelsFive-Fat';
+                                    color: #fff;
+                                    padding:10px;
+                                    display: none;
+
+                                }
+
+                                .imagen{
+                                    float: left;
+                                    opacity:.5;
+                                }
+
+                                &:hover{
+
+                                         .text{
+                                                 display: block;
+                                            }
+
+                                            .imagen{
+                                                    opacity:1;
+                                            }
+
+
+                                }
+                     }
+
+
+
+                   
+            }
+
+
+            .columnasInfo{
+                    float: left;
+
+                    .item-A{
+                            padding: 40px 70px 30px 0;
+                    }
+
+                    .item-B{
+                            padding: 40px 35px 30px 0;
+                    }
+
+                    .item-C{
+                            padding: 40px 0px 30px 0 ;
+                    }
+
+                    .item{
+
+                                .text{
+                                    float: left;
+                                    font-family: 'Brandon_reg';
+                                    color: #fff;
+                                    color: rgba(255, 255, 255, 0.6);
+                                    -webkit-color: rgba(255, 255, 255, 0.6);
+                                    -moz-color: rgba(255, 255, 255, 0.6);
+                                    -ms-color: rgba(255, 255, 255, 0.6);
+                                    -o-color: rgba(255, 255, 255, 0.6);
+                                    font-size: 15px;
+                                    padding:0px 20px 20px 0px;
+                                    margin: 0;
+                                    padding: 0;
+                                    line-height: 18px;
+                                }
+
+                                .imagen{
+                                        display: block;
+                                        margin: 0 auto;
+                                 }
+
+                                 .block{
+                                            margin-top: 10px;
+                                 }
+
+                                 .destacado{
+                                          color: $verde;
+                                          font-size: 13px;
+                                }
+
+                                ul{
+                                    float: left;
+                                        li{
+                                            color:$verde;
+                                         }
+
+                                         .glyphicon{
+                                            font-size: 10px;
+                                         }
+
+                                }
+
+                    }
+                   
+            }
+
+            .footer-menu{
+                    margin-bottom: 50px;
+                    padding-top: 30px;
+                    margin-top: -1px;
+                    border-top: solid 2px rgba(255, 255, 255, 0.2);
+                    -webkit-border-top: solid 2px rgba(255, 255, 255, 0.2);
+                    -moz-border-top: solid 2px rgba(255, 255, 255, 0.2);
+                    -ms-border-top: solid 2px rgba(255, 255, 255, 0.2);
+                    -o-border-top: solid 2px rgba(255, 255, 255, 0.2);
+
+                    .block-items{
+                                 position: relative;
+                                 width: 107%;
+                                float: left;
+
+                                .item{
+                                            width: 27%;
+                                            float: left;
+                                            margin-right: 6%;
+
+                                             p{
+                                                    color: #fff;
+                                                    font-size: 16px;
+                                                    font-family: 'Brandon_reg';
+                                                    float: left;
+                                                    width: 100%;
+                                                    line-height: 18px;
+                                             }
+
+                                             hr{
+                                                        border: none;
+                                                        border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
+                                                        -webkit-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
+                                                        -moz-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
+                                                        -ms-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
+                                                        -o-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
+                                                        letter-spacing: 10px;
+                                                        margin: 10px 0;
+                                                        padding: 0;
+                                                        margin-right: 1px;
+                                                        float: left;
+                                                        width: 100%;
+                                            }
+
+                                            .flecha{
+                                                    display: none;
+                                            }
+
+                                            &:hover{
+                                                cursor: pointer;
+
+                                                .flecha{
+                                                        display: block;
+                                                }
+
+                                                 .imagen{
+                                                     margin-top: -18px;
+                                                     margin-bottom: 10px;
+                                                }
+
+                                            }
+                                }
+                    }
+                   
+         }
+
+      
+}
+
+
+
+
+
+
+// ==========================================================================
+/* RESPONSIVE  */
+// ==========================================================================
+
+/*mobile--------------------------------------------------*/
+@media screen and (min-width: 0px) and (max-width : 767px){
+    .base {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .base .contenido {
+        width: 100%;
+    }
+
+    .footer {
+            position: relative;
+            padding-top: 40px;
+    }
+
+    .footer img {
+        margin-top: 0px;
+    }
+
+    .contenedor {
+                   padding-bottom:50px;
+        }
+ 
+
+}
+
+
+/*tablet----------------------------------------*/
+@media screen and (min-width: 768px) and (max-width : 1280px){
+  
+}
+
+/**  TABLETS LANDSCAPE **/
+@media screen and (min-width: 771px) and (max-width : 980px){
+    .base {
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .base .contenido {
+            width: 100%;
+        }
+
+        
+
+
+}
+
+/*notbook------------------------------------*/
+@media screen and (min-width: 1280px) and (max-width : 1800px){
+	
+}
+
+/*desktop------------------------------*/
+@media screen and (min-width: 1801px) and (max-width : 2200px){
+
+}
+
+/*desktop large-----------------------------------------------*/
+@media screen and (min-width: 2220px) and (max-width : 4000px){
+
+}
