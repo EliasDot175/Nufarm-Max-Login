@@ -509,7 +509,7 @@ body {
   margin: 0 auto 40px auto;
   position: relative;
   display: table;
-  padding-bottom: 150px; }
+  padding-bottom: 50px; }
 
 .contenedor-body {
   min-height: 500px; }
@@ -518,7 +518,11 @@ body {
   opacity: .5; }
 
 .contenidoGeneral {
-  padding: 170px 0 !important; }
+  padding: 170px 0 !important;
+  -webkit-transition: padding 0.5s ease;
+  -moz-transition: padding 0.5s ease;
+  -o-transition: padding 0.5s ease;
+  transition: padding 0.5s ease; }
 
 .head {
   height: 170px;
@@ -596,7 +600,12 @@ body {
     width: 260px;
     display: block;
     margin: 0 auto;
-    margin-top: 30px; }
+    margin-top: 30px;
+    position: relative;
+    left: 50%;
+    margin-left: -130px;
+    float: left;
+    top: 10px; }
 
 .base {
   width: 100%;
@@ -754,14 +763,22 @@ body {
     width: 100%; }
 
   .footer {
-    position: relative;
-    padding-top: 40px; }
+    position: relative !important;
+    padding-top: 40px !important; }
 
   .footer img {
     margin-top: 0px; }
 
   .contenedor {
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+
+  .base .contenido {
+    left: 0;
+    margin-left: 0;
+    padding: 40px 0; }
+
+  .contenidoGeneral {
+    padding: 40px 0 !important; } }
 /*tablet----------------------------------------*/
 /**  TABLETS LANDSCAPE **/
 @media screen and (min-width: 771px) and (max-width: 980px) {
@@ -770,7 +787,15 @@ body {
     box-sizing: border-box; }
 
   .base .contenido {
-    width: 100%; } }
+    width: 100%; }
+
+  .base .contenido {
+    left: 0;
+    margin-left: 0;
+    padding: 40px 0; }
+
+  .contenidoGeneral {
+    padding: 40px 0 !important; } }
 /*notbook------------------------------------*/
 /*desktop------------------------------*/
 /*desktop large-----------------------------------------------*/

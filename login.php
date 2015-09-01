@@ -39,7 +39,7 @@
 					<a href="#" >
 						<div class="block-icon">
 							<img class="imagen" src="assets/images/flecha.png" alt="">
-							<p class="text text-uppercase">Ingresar a catálogo</p>
+							<p class="text text-uppercase">Ver estado</p>
 						</div>
 					</a>
 					<a href="#" >
@@ -66,7 +66,7 @@
 					<a href="#" >
 						<div class="block-icon" >
 							<img class="imagen" src="assets/images/flecha.png" alt="">
-							<p class="text text-uppercase">Ingresar a catálogo</p>
+							<p class="text text-uppercase">Ver estado</p>
 						</div>
 					</a>
 					<a href="#" >

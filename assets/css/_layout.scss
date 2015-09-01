@@ -132,7 +132,7 @@ $verde : #78AC7A;;
     margin: 0 auto 40px auto;
     position: relative;
     display: table;
-    padding-bottom:150px;
+    padding-bottom:50px;
 }
 
 .contenedor-body {
@@ -145,6 +145,10 @@ $verde : #78AC7A;;
 
  .contenidoGeneral{
         padding: 170px 0 !important;
+        -webkit-transition: padding 0.5s ease;
+        -moz-transition: padding 0.5s ease;
+        -o-transition: padding 0.5s ease;
+        transition: padding 0.5s ease;
 }
 
 .head {
@@ -230,26 +234,32 @@ $verde : #78AC7A;;
 
 
 .footer {
-    height: 130px;
-    background-image: url("../images/footer.png");
-    background-size: cover;
-    repeat: no-repeat;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 0;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+        height: 130px;
+        background-image: url("../images/footer.png");
+        background-size: cover;
+        repeat: no-repeat;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position-y: 0;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        
 
-    img {
+        img {
 	    margin-top: 15px;
 	    width: 260px;
 	    display: block;
 	    margin: 0 auto;
 	    margin-top: 30px;
+                position: relative;
+                left: 50%;
+                margin-left: -130px;
+                float: left;
+                top: 10px;
 	}
 }
 
@@ -510,8 +520,8 @@ $verde : #78AC7A;;
     }
 
     .footer {
-            position: relative;
-            padding-top: 40px;
+            position: relative !important;
+            padding-top: 40px !important;
     }
 
     .footer img {
@@ -522,6 +532,15 @@ $verde : #78AC7A;;
                    padding-bottom:50px;
         }
  
+    .base .contenido {
+        left: 0;
+        margin-left: 0;
+        padding: 40px 0;
+    }
+
+        .contenidoGeneral {
+    padding: 40px 0 !important;
+}
 
 }
 
@@ -542,6 +561,15 @@ $verde : #78AC7A;;
             width: 100%;
         }
 
+    .base .contenido {
+        left: 0;
+        margin-left: 0;
+        padding: 40px 0;
+    }
+
+    .contenidoGeneral {
+    padding: 40px 0 !important;
+}
         
 
 
