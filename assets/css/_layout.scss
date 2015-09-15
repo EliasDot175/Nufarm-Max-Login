@@ -27,6 +27,18 @@
 }
 
 @font-face {
+    font-family: 'BrandonGrotesque-Light';
+    src: url('../fonts/BrandonGrotesque-Light.eot');
+    src: url('../fonts/BrandonGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+         // url('../fonts/BrandonGrotesque-Light.woff2') format('woff2'),
+         url('../fonts/BrandonGrotesque-Light.woff') format('woff'),
+         url('../fonts/BrandonGrotesque-Light.ttf') format('truetype'),
+         url('../fonts/BrandonGrotesque-Light.svg#BrandonGrotesque-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Brandon_reg';
     src: url('../fonts/brandon_reg-webfont.eot');
     src: url('../fonts/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
@@ -123,114 +135,198 @@ body {
     padding-bottom: 0px;
 }
 
+// text
+$white: #FFF;
+$green: #5AAF7A;
 
-$verde : #78AC7A;;
+// backgrounds
+$white-bg: rgba(255, 255, 255, .2);;
+$black-bg: rgba(0, 0, 0, .2);
+$verde : #78AC7A;
 
-
-.contenedor {
-    width: 100%;
-    margin: 0 auto 40px auto;
-    position: relative;
-    display: table;
-    padding-bottom:50px;
-}
-
-.contenedor-body {
-    min-height: 500px;
-}
-
-.inactivo {
-            opacity: .5;
-}
-
- .contenidoGeneral{
-        padding: 170px 0 !important;
-        -webkit-transition: padding 0.5s ease;
-        -moz-transition: padding 0.5s ease;
-        -o-transition: padding 0.5s ease;
-        transition: padding 0.5s ease;
+.container-fluid{
+	padding-bottom: 5%;
+	margin-bottom: 5%;
+	background-color: rgba(0, 0, 0, 0.6);
+    -moz-background-color: rgba(0, 0, 0, 0.6);
+    -webkit-background-color: rgba(0, 0, 0, 0.6);
+    -o-background-color: rgba(0, 0, 0, 0.6);
+    -ms-background-color: rgba(0, 0, 0, 0.6);
 }
 
 .head {
-            height: 170px;
-            background-color: rgba(#008D45, .6);
+	height: 170px;
+	background-color: rgba(#008D45, .6);
 
-   	 img {
-		margin: 38px auto;
-		display: block;
+	img {
+		margin-top: 40px;
+		float: left
+	}
+}
+
+.inner{
+	max-width: 840px;
+	margin: 0 auto;
+	display: table;
+	width: 100%;
+}
+
+.top-menu{
+	background: $black-bg;
+	height: 40px;
+	margin-bottom: 120px;
+
+	a{
+		color: $white;
+		font-size: 12px;
+		display: inline-block;
+		padding-left: 30px;
+		float: left;
+		line-height: 40px;
+		text-transform: uppercase;
+		font-family: 'BrandonGrotesque-Light';
+
+		&:first-child{
+			background: url('../images/icon-text.png') no-repeat left center;
+			margin-right: 30px;
+		}
+
+		&:last-child{
+			background: url('../images/icon-contact.png') no-repeat left center;	
+		}
+	}
+}
+
+.inner{
+	.login-box{
+		display: table;
+		padding-right: 40px;
+
+		.icon{
+			display: block;
+			padding:0 40px 40px 0;
+			text-align: center;
+		}
+
+		h3{
+			border-left: 2px solid #fff;
+			font-size: 27px;
+			height: 57px;
+			line-height: 30px;
+			color: #fff;
+			padding-left: 10px;
+			font-family: 'BrooklynSamuelsFive-Fat';
+			margin-bottom: 20px;
+			text-transform: uppercase;
+
+			.de{
+	            font-size: 20px;
+	            position: relative;
+	            top: -10px;
+	        }
+
+			span{
+				font-size: 34px;
+			}
+        }
+
+        .pre{
+        	color: $white;
+        	font-family: 'BrandonGrotesque-Light';
+        	opacity: .5;
+        	font-size: 15px;
+        	line-height: 16px;
+        	padding-right: 40px;
+        }
+
+        a{
+        	font-family: 'BrooklynSamuelsFive-Fat';
+        	text-transform: uppercase;
+        }
+        a.show-more{
+        	width: 100%;
+        	float: left;
+        	margin: 10px 0 30px;
+        	border-top: 1px solid $white;
+        	padding-top: 10px;
+        	opacity: .5;
+        	-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+
+        	span{
+        		color: $white;
+        		line-height: 25px;
+        		padding-right: 35px;
+        		float: right;
+        		font-size: 11px;
+        		display: block;
+        		background: url('../images/mas.png') no-repeat right center;
+        		background-size: 25px;
+        	}
+
+        	&:hover{
+        		opacity: 1;
+        	}
+        }
+
+        a.goto{
+        	background: $white-bg;
+        	float: left;
+        	height: 40px;
+        	line-height: 50px;
+        	font-size: 15px;
+        	color: $white;
+        	text-align: center;
+        	width: 100%;
+        }
 	}
 
-            .block{
-                        float: right;
-                        position: absolute;
-                        right: 0;
-                        top: 20px;
+	.info-box{
+		padding-top: 10px;
+		border-top: 1px solid $white;
 
-                        select{
-                                color: #fff;
-                                font-family: 'BrooklynSamuelsFive-Bold';
-                                background-color: $verde;
-                                border: none;
-                                box-shadow: none;
-                                background-image: url('../images/background-select2.png');
-                                background-size: 100% 80%;
-                                background-repeat: no-repeat;
-                                background-position-x: 0;
-                                background-position-y: bottom;
-                                direction: rtl;
-                                -webkit-appearance: none;
-                                -moz-appearance: none;
-                                appearance: none;
-                                padding-right:20px;
-                        }
+		p{
+			color: $white;
+			display: block;
+        	font-family: 'BrandonGrotesque-Light';
+        	opacity: .5;
+        	font-size: 14px;
+        	line-height: 17px;
+			padding: 20px 40px 0 0;
 
-                        .option {
-                                padding:10px !important;
-                        }
+				span{
+					color: $green;
+					text-transform: uppercase;
+					font-size: 13px;
+					font-family: 'Brandon_reg';
+					display: block;
+					margin-bottom: 5px;
+				}
+		}
 
-                        .icon-select {
-                                position: absolute;
-                                right: 0;
-                                top: 5px;
-                        }
-            }
+		img{
+			display: block;
+			float: right;
+		}
 
-            .contenedor {
-                    min-height: 0px;
-            }
-
-             .logout {
-                        float: right;
-                        padding-top:10px;
-                        cursor: pointer;
-                    
-                        p{
-                                    color: #fff;
-                                    float: left;
-                                    font-family: 'BrooklynSamuelsFive-Bold';
-                                    font-size: 11px;
-                                    padding-top: 2px;
-                                    padding-right:5px;
-                         }
-
-                         img{
-                                    float: left;
-                         }
-
-                         &:hover{
-                                opacity: .5;
-                         }
-            }
+		.goto{
+			background: $white-bg;
+        	float: left;
+        	height: 40px;
+        	line-height: 50px;
+        	font-size: 15px;
+        	font-family: 'BrooklynSamuelsFive-Fat';
+        	text-transform: uppercase;
+        	margin-top: 20px;
+        	color: $white;
+        	text-align: center;
+        	width: 100%;
+		}
+	}
 }
-
-.centrado{
-    margin: 0 auto;
-}
-
-.oculto{
-        display: none;
-}
-
 
 
 .footer {
@@ -262,247 +358,6 @@ $verde : #78AC7A;;
                 top: 10px;
 	}
 }
-
-
-.base{
-            width: 100%;
-            float: left;
-            background-color: rgba(0, 0, 0, 0.6);
-            -moz-background-color: rgba(0, 0, 0, 0.6);
-            -webkit-background-color: rgba(0, 0, 0, 0.6);
-            -o-background-color: rgba(0, 0, 0, 0.6);
-            -ms-background-color: rgba(0, 0, 0, 0.6);
-
-            .contenido{
-                        min-height: 500px; 
-                        width: 840px;
-                        float: left;
-                        position: relative;
-                        left: 50%;
-                        margin-left: -420px;
-                        display: block;
-                        padding: 70px 0;
-            }
-
-            .columnasTitulo{
-
-                     .titulo{
-                                width: 100%;
-                                float: left;
-                                padding: 20px 20px 20px 0px;
-                                box-sizing: border-box;
-                                border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-
-                             h3{
-                                    border-left: 2px solid #fff;
-                                    font-size: 27px;
-                                    height: 57px;
-                                    line-height: 30px;
-                                    color: #fff;
-                                    padding-left:10px;
-                                    font-family: 'BrooklynSamuelsFive-Fat';
-                                    margin-bottom: 20px;
-                                    opacity: .5;
-
-
-                                            span{
-                                                    font-size: 34px;
-                                            }
-
-                                            .de{
-                                                font-size: 20px;
-                                                position: relative;
-                                                top: -10px;
-                                            }
-                                }
-                     }
-
-                     .activo{
-                                border: none;
-
-                                h3{
-                                    opacity: 1;
-                                }
-                    }
-
-
-                     .block-icon{
-                                width: 100%;
-                                float: left;
-                                margin: 1px 0;
-                                height: 33px;
-                                cursor:pointer;
-
-                                .text{
-                                    float: left;
-                                    font-family: 'BrooklynSamuelsFive-Fat';
-                                    color: #fff;
-                                    padding:10px;
-                                    display: none;
-
-                                }
-
-                                .imagen{
-                                    float: left;
-                                    opacity:.5;
-                                }
-
-                                &:hover{
-
-                                         .text{
-                                                 display: block;
-                                            }
-
-                                            .imagen{
-                                                    opacity:1;
-                                            }
-
-
-                                }
-                     }
-
-
-
-                   
-            }
-
-
-            .columnasInfo{
-                    float: left;
-
-                    .item-A{
-                            padding: 40px 70px 30px 0;
-                    }
-
-                    .item-B{
-                            padding: 40px 35px 30px 0;
-                    }
-
-                    .item-C{
-                            padding: 40px 0px 30px 0 ;
-                    }
-
-                    .item{
-
-                                .text{
-                                    float: left;
-                                    font-family: 'Brandon_reg';
-                                    color: #fff;
-                                    color: rgba(255, 255, 255, 0.6);
-                                    -webkit-color: rgba(255, 255, 255, 0.6);
-                                    -moz-color: rgba(255, 255, 255, 0.6);
-                                    -ms-color: rgba(255, 255, 255, 0.6);
-                                    -o-color: rgba(255, 255, 255, 0.6);
-                                    font-size: 15px;
-                                    padding:0px 20px 20px 0px;
-                                    margin: 0;
-                                    padding: 0;
-                                    line-height: 18px;
-                                }
-
-                                .imagen{
-                                        display: block;
-                                        margin: 0 auto;
-                                 }
-
-                                 .block{
-                                            margin-top: 10px;
-                                 }
-
-                                 .destacado{
-                                          color: $verde;
-                                          font-size: 13px;
-                                }
-
-                                ul{
-                                    float: left;
-                                        li{
-                                            color:$verde;
-                                         }
-
-                                         .glyphicon{
-                                            font-size: 10px;
-                                         }
-
-                                }
-
-                    }
-                   
-            }
-
-            .footer-menu{
-                    margin-bottom: 50px;
-                    padding-top: 30px;
-                    margin-top: -1px;
-                    border-top: solid 2px rgba(255, 255, 255, 0.2);
-                    -webkit-border-top: solid 2px rgba(255, 255, 255, 0.2);
-                    -moz-border-top: solid 2px rgba(255, 255, 255, 0.2);
-                    -ms-border-top: solid 2px rgba(255, 255, 255, 0.2);
-                    -o-border-top: solid 2px rgba(255, 255, 255, 0.2);
-
-                    .block-items{
-                                 position: relative;
-                                 width: 107%;
-                                float: left;
-
-                                .item{
-                                            width: 44%;
-                                            float: left;
-                                            margin-right: 6%;
-
-                                             p{
-                                                    color: #fff;
-                                                    font-size: 16px;
-                                                    font-family: 'Brandon_reg';
-                                                    float: left;
-                                                    width: 100%;
-                                                    line-height: 18px;
-                                             }
-
-                                             hr{
-                                                        border: none;
-                                                        border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-                                                        -webkit-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-                                                        -moz-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-                                                        -ms-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-                                                        -o-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-                                                        letter-spacing: 10px;
-                                                        margin: 10px 0;
-                                                        padding: 0;
-                                                        margin-right: 1px;
-                                                        float: left;
-                                                        width: 100%;
-                                            }
-
-                                            .flecha{
-                                                    display: none;
-                                            }
-
-                                            &:hover{
-                                                cursor: pointer;
-
-                                                .flecha{
-                                                        display: block;
-                                                }
-
-                                                 .imagen{
-                                                     margin-top: -18px;
-                                                     margin-bottom: 10px;
-                                                }
-
-                                            }
-                                }
-                    }
-                   
-         }
-
-      
-}
-
-
-
-
-
 
 // ==========================================================================
 /* RESPONSIVE  */

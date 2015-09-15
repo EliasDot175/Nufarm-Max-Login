@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, p {
 .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7,
 .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
 .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
-.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .container-fluid {
   padding-left: 0px;
   padding-right: 0px; }
 
@@ -444,6 +444,12 @@ li > a:focus {
   font-weight: normal;
   font-style: normal; }
 @font-face {
+  font-family: 'BrandonGrotesque-Light';
+  src: url("../fonts/BrandonGrotesque-Light.eot");
+  src: url("../fonts/BrandonGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/BrandonGrotesque-Light.woff") format("woff"), url("../fonts/BrandonGrotesque-Light.ttf") format("truetype"), url("../fonts/BrandonGrotesque-Light.svg#BrandonGrotesque-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
   font-family: 'Brandon_reg';
   src: url("../fonts/brandon_reg-webfont.eot");
   src: url("../fonts/brandon_reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_reg-webfont.woff2") format("woff2"), url("../fonts/brandon_reg-webfont.woff") format("woff"), url("../fonts/brandon_reg-webfont.ttf") format("truetype"), url("../fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg") format("svg");
@@ -504,82 +510,145 @@ body {
   padding-top: 0px;
   padding-bottom: 0px; }
 
-.contenedor {
-  width: 100%;
-  margin: 0 auto 40px auto;
-  position: relative;
-  display: table;
-  padding-bottom: 50px; }
-
-.contenedor-body {
-  min-height: 500px; }
-
-.inactivo {
-  opacity: .5; }
-
-.contenidoGeneral {
-  padding: 170px 0 !important;
-  -webkit-transition: padding 0.5s ease;
-  -moz-transition: padding 0.5s ease;
-  -o-transition: padding 0.5s ease;
-  transition: padding 0.5s ease; }
+.container-fluid {
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+  -moz-background-color: rgba(0, 0, 0, 0.6);
+  -webkit-background-color: rgba(0, 0, 0, 0.6);
+  -o-background-color: rgba(0, 0, 0, 0.6);
+  -ms-background-color: rgba(0, 0, 0, 0.6); }
 
 .head {
   height: 170px;
   background-color: rgba(0, 141, 69, 0.6); }
   .head img {
-    margin: 38px auto;
-    display: block; }
-  .head .block {
-    float: right;
-    position: absolute;
-    right: 0;
-    top: 20px; }
-    .head .block select {
-      color: #fff;
-      font-family: 'BrooklynSamuelsFive-Bold';
-      background-color: #78AC7A;
-      border: none;
-      box-shadow: none;
-      background-image: url("../images/background-select2.png");
-      background-size: 100% 80%;
-      background-repeat: no-repeat;
-      background-position-x: 0;
-      background-position-y: bottom;
-      direction: rtl;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      padding-right: 20px; }
-    .head .block .option {
-      padding: 10px !important; }
-    .head .block .icon-select {
-      position: absolute;
-      right: 0;
-      top: 5px; }
-  .head .contenedor {
-    min-height: 0px; }
-  .head .logout {
-    float: right;
+    margin-top: 40px;
+    float: left; }
+
+.inner {
+  max-width: 840px;
+  margin: 0 auto;
+  display: table;
+  width: 100%; }
+
+.top-menu {
+  background: rgba(0, 0, 0, 0.2);
+  height: 40px;
+  margin-bottom: 120px; }
+  .top-menu a {
+    color: #FFF;
+    font-size: 12px;
+    display: inline-block;
+    padding-left: 30px;
+    float: left;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'BrandonGrotesque-Light'; }
+    .top-menu a:first-child {
+      background: url("../images/icon-text.png") no-repeat left center;
+      margin-right: 30px; }
+    .top-menu a:last-child {
+      background: url("../images/icon-contact.png") no-repeat left center; }
+
+.inner .login-box {
+  display: table;
+  padding-right: 40px; }
+  .inner .login-box .icon {
+    display: block;
+    padding: 0 40px 40px 0;
+    text-align: center; }
+  .inner .login-box h3 {
+    border-left: 2px solid #fff;
+    font-size: 27px;
+    height: 57px;
+    line-height: 30px;
+    color: #fff;
+    padding-left: 10px;
+    font-family: 'BrooklynSamuelsFive-Fat';
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+    .inner .login-box h3 .de {
+      font-size: 20px;
+      position: relative;
+      top: -10px; }
+    .inner .login-box h3 span {
+      font-size: 34px; }
+  .inner .login-box .pre {
+    color: #FFF;
+    font-family: 'BrandonGrotesque-Light';
+    opacity: .5;
+    font-size: 15px;
+    line-height: 16px;
+    padding-right: 40px; }
+  .inner .login-box a {
+    font-family: 'BrooklynSamuelsFive-Fat';
+    text-transform: uppercase; }
+  .inner .login-box a.show-more {
+    width: 100%;
+    float: left;
+    margin: 10px 0 30px;
+    border-top: 1px solid #FFF;
     padding-top: 10px;
-    cursor: pointer; }
-    .head .logout p {
-      color: #fff;
-      float: left;
-      font-family: 'BrooklynSamuelsFive-Bold';
+    opacity: .5;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .inner .login-box a.show-more span {
+      color: #FFF;
+      line-height: 25px;
+      padding-right: 35px;
+      float: right;
       font-size: 11px;
-      padding-top: 2px;
-      padding-right: 5px; }
-    .head .logout img {
-      float: left; }
-    .head .logout:hover {
-      opacity: .5; }
-
-.centrado {
-  margin: 0 auto; }
-
-.oculto {
-  display: none; }
+      display: block;
+      background: url("../images/mas.png") no-repeat right center;
+      background-size: 25px; }
+    .inner .login-box a.show-more:hover {
+      opacity: 1; }
+  .inner .login-box a.goto {
+    background: rgba(255, 255, 255, 0.2);
+    float: left;
+    height: 40px;
+    line-height: 50px;
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+    width: 100%; }
+.inner .info-box {
+  padding-top: 10px;
+  border-top: 1px solid #FFF; }
+  .inner .info-box p {
+    color: #FFF;
+    display: block;
+    font-family: 'BrandonGrotesque-Light';
+    opacity: .5;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 20px 40px 0 0; }
+    .inner .info-box p span {
+      color: #5AAF7A;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-family: 'Brandon_reg';
+      display: block;
+      margin-bottom: 5px; }
+  .inner .info-box img {
+    display: block;
+    float: right; }
+  .inner .info-box .goto {
+    background: rgba(255, 255, 255, 0.2);
+    float: left;
+    height: 40px;
+    line-height: 50px;
+    font-size: 15px;
+    font-family: 'BrooklynSamuelsFive-Fat';
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #FFF;
+    text-align: center;
+    width: 100%; }
 
 .footer {
   height: 130px;
@@ -606,151 +675,6 @@ body {
     margin-left: -130px;
     float: left;
     top: 10px; }
-
-.base {
-  width: 100%;
-  float: left;
-  background-color: rgba(0, 0, 0, 0.6);
-  -moz-background-color: rgba(0, 0, 0, 0.6);
-  -webkit-background-color: rgba(0, 0, 0, 0.6);
-  -o-background-color: rgba(0, 0, 0, 0.6);
-  -ms-background-color: rgba(0, 0, 0, 0.6); }
-  .base .contenido {
-    min-height: 500px;
-    width: 840px;
-    float: left;
-    position: relative;
-    left: 50%;
-    margin-left: -420px;
-    display: block;
-    padding: 70px 0; }
-  .base .columnasTitulo .titulo {
-    width: 100%;
-    float: left;
-    padding: 20px 20px 20px 0px;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
-    .base .columnasTitulo .titulo h3 {
-      border-left: 2px solid #fff;
-      font-size: 27px;
-      height: 57px;
-      line-height: 30px;
-      color: #fff;
-      padding-left: 10px;
-      font-family: 'BrooklynSamuelsFive-Fat';
-      margin-bottom: 20px;
-      opacity: .5; }
-      .base .columnasTitulo .titulo h3 span {
-        font-size: 34px; }
-      .base .columnasTitulo .titulo h3 .de {
-        font-size: 20px;
-        position: relative;
-        top: -10px; }
-  .base .columnasTitulo .activo {
-    border: none; }
-    .base .columnasTitulo .activo h3 {
-      opacity: 1; }
-  .base .columnasTitulo .block-icon {
-    width: 100%;
-    float: left;
-    margin: 1px 0;
-    height: 33px;
-    cursor: pointer; }
-    .base .columnasTitulo .block-icon .text {
-      float: left;
-      font-family: 'BrooklynSamuelsFive-Fat';
-      color: #fff;
-      padding: 10px;
-      display: none; }
-    .base .columnasTitulo .block-icon .imagen {
-      float: left;
-      opacity: .5; }
-    .base .columnasTitulo .block-icon:hover .text {
-      display: block; }
-    .base .columnasTitulo .block-icon:hover .imagen {
-      opacity: 1; }
-  .base .columnasInfo {
-    float: left; }
-    .base .columnasInfo .item-A {
-      padding: 40px 70px 30px 0; }
-    .base .columnasInfo .item-B {
-      padding: 40px 35px 30px 0; }
-    .base .columnasInfo .item-C {
-      padding: 40px 0px 30px 0; }
-    .base .columnasInfo .item .text {
-      float: left;
-      font-family: 'Brandon_reg';
-      color: #fff;
-      color: rgba(255, 255, 255, 0.6);
-      -webkit-color: rgba(255, 255, 255, 0.6);
-      -moz-color: rgba(255, 255, 255, 0.6);
-      -ms-color: rgba(255, 255, 255, 0.6);
-      -o-color: rgba(255, 255, 255, 0.6);
-      font-size: 15px;
-      padding: 0px 20px 20px 0px;
-      margin: 0;
-      padding: 0;
-      line-height: 18px; }
-    .base .columnasInfo .item .imagen {
-      display: block;
-      margin: 0 auto; }
-    .base .columnasInfo .item .block {
-      margin-top: 10px; }
-    .base .columnasInfo .item .destacado {
-      color: #78AC7A;
-      font-size: 13px; }
-    .base .columnasInfo .item ul {
-      float: left; }
-      .base .columnasInfo .item ul li {
-        color: #78AC7A; }
-      .base .columnasInfo .item ul .glyphicon {
-        font-size: 10px; }
-  .base .footer-menu {
-    margin-bottom: 50px;
-    padding-top: 30px;
-    margin-top: -1px;
-    border-top: solid 2px rgba(255, 255, 255, 0.2);
-    -webkit-border-top: solid 2px rgba(255, 255, 255, 0.2);
-    -moz-border-top: solid 2px rgba(255, 255, 255, 0.2);
-    -ms-border-top: solid 2px rgba(255, 255, 255, 0.2);
-    -o-border-top: solid 2px rgba(255, 255, 255, 0.2); }
-    .base .footer-menu .block-items {
-      position: relative;
-      width: 107%;
-      float: left; }
-      .base .footer-menu .block-items .item {
-        width: 44%;
-        float: left;
-        margin-right: 6%; }
-        .base .footer-menu .block-items .item p {
-          color: #fff;
-          font-size: 16px;
-          font-family: 'Brandon_reg';
-          float: left;
-          width: 100%;
-          line-height: 18px; }
-        .base .footer-menu .block-items .item hr {
-          border: none;
-          border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-          -webkit-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-          -moz-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-          -ms-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-          -o-border-bottom: dotted 2px rgba(255, 255, 255, 0.2);
-          letter-spacing: 10px;
-          margin: 10px 0;
-          padding: 0;
-          margin-right: 1px;
-          float: left;
-          width: 100%; }
-        .base .footer-menu .block-items .item .flecha {
-          display: none; }
-        .base .footer-menu .block-items .item:hover {
-          cursor: pointer; }
-          .base .footer-menu .block-items .item:hover .flecha {
-            display: block; }
-          .base .footer-menu .block-items .item:hover .imagen {
-            margin-top: -18px;
-            margin-bottom: 10px; }
 
 /* RESPONSIVE  */
 /*mobile--------------------------------------------------*/
