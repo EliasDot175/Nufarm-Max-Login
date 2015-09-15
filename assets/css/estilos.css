@@ -516,14 +516,14 @@ body {
   padding: 50px 120px;
   margin: 20% auto 0; }
 
-.login-box {
+.login-dialog {
   background-color: rgba(0, 141, 69, 0.3);
   max-width: 600px;
   width: 100%;
   padding: 40px 120px;
   margin: 0 auto;
   overflow: hidden; }
-  .login-box label {
+  .login-dialog label {
     float: left;
     width: 100%;
     margin-top: 5px;
@@ -531,7 +531,7 @@ body {
     color: #FFF;
     text-transform: uppercase;
     text-align: center; }
-  .login-box input {
+  .login-dialog input {
     font-family: 'Brandon_reg';
     float: left;
     color: #FFF;
@@ -539,19 +539,19 @@ body {
     padding: 2%;
     border: 0;
     background: rgba(0, 148, 72, 0.4); }
-  .login-box p {
+  .login-dialog p {
     float: left;
     font-size: 15px;
     color: #BED73B;
     margin-top: 3px;
     font-family: 'Brandon_reg';
     width: 100%; }
-  .login-box .btn {
+  .login-dialog .btn {
     float: left;
     width: 100%;
     text-align: center;
     margin-top: 20px; }
-    .login-box .btn button {
+    .login-dialog .btn button {
       background: #5AAF7A;
       font-family: 'BrooklynSamuelsFive-Fat';
       border: 0;

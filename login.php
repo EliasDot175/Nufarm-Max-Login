@@ -7,7 +7,7 @@
 		<img src="assets/images/logo-green.png" id="Nufarm Gold" title="Nufarm Gold" alt="Imagen no encontrada">
 	</div>
 
-	<div class="login-box">
+	<div class="login-dialog">
 		<form name="" action="" method="" id="">
 			<label>
 				usuario
