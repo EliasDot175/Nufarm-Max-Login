@@ -144,6 +144,72 @@ $white-bg: rgba(255, 255, 255, .2);;
 $black-bg: rgba(0, 0, 0, .2);
 $verde : #78AC7A;
 
+// LOGIN BOX
+.login-top{
+	max-width: 600px;
+	width: 100%;
+	padding: 50px 120px;
+	margin: 20% auto 0;
+}
+
+.login-box{
+	background-color: rgba(#008D45, .3);
+	max-width: 600px;
+	width: 100%;
+	padding: 40px 120px;
+	margin: 0 auto;
+	overflow: hidden;
+
+		label{
+			float: left;
+			width: 100%;
+			margin-top: 5px;
+			font-family: 'BrooklynSamuelsFive-Fat';
+			color: $white;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		input{
+			font-family: 'Brandon_reg';
+			float: left;
+			color: $white;
+			width: 96%;
+			padding: 2%;
+			border: 0;
+			background: rgba(0, 148, 72, .4);
+		}
+
+		p{
+			float: left;
+			font-size: 15px;
+			color: #BED73B;
+			margin-top: 3px;
+			font-family: 'Brandon_reg';
+			width: 100%;
+		}
+
+		.btn{
+			float: left;
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+			
+			button{
+				background: $green;
+				font-family: 'BrooklynSamuelsFive-Fat';
+				border: 0;
+				color: $white;
+				font-size: 15px;
+				width: 230px;
+				line-height: 40px;
+				text-transform: uppercase;
+			}
+		}
+		
+}
+
+// PANTALLA DE SELECT
 .container-fluid{
 	padding-bottom: 5%;
 	margin-bottom: 5%;

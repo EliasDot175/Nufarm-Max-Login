@@ -510,6 +510,57 @@ body {
   padding-top: 0px;
   padding-bottom: 0px; }
 
+.login-top {
+  max-width: 600px;
+  width: 100%;
+  padding: 50px 120px;
+  margin: 20% auto 0; }
+
+.login-box {
+  background-color: rgba(0, 141, 69, 0.3);
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 120px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .login-box label {
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    font-family: 'BrooklynSamuelsFive-Fat';
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center; }
+  .login-box input {
+    font-family: 'Brandon_reg';
+    float: left;
+    color: #FFF;
+    width: 96%;
+    padding: 2%;
+    border: 0;
+    background: rgba(0, 148, 72, 0.4); }
+  .login-box p {
+    float: left;
+    font-size: 15px;
+    color: #BED73B;
+    margin-top: 3px;
+    font-family: 'Brandon_reg';
+    width: 100%; }
+  .login-box .btn {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; }
+    .login-box .btn button {
+      background: #5AAF7A;
+      font-family: 'BrooklynSamuelsFive-Fat';
+      border: 0;
+      color: #FFF;
+      font-size: 15px;
+      width: 230px;
+      line-height: 40px;
+      text-transform: uppercase; }
+
 .container-fluid {
   padding-bottom: 5%;
   margin-bottom: 5%;
