@@ -690,7 +690,14 @@ html, body, .container-fluid {
     font-size: 15px;
     color: #FFF;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .inner .login-box a.goto:hover {
+      background: rgba(255, 255, 255, 0.4); }
 .inner .info-box {
   background: url("../images/infobox-bg.png") no-repeat;
   padding-top: 20px;
@@ -739,7 +746,14 @@ html, body, .container-fluid {
     margin-top: 20px;
     color: #FFF;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .inner .info-box .enter:hover {
+      background: rgba(255, 255, 255, 0.4); }
 
 #box1.info-box {
   background-position: -650px 0px; }
