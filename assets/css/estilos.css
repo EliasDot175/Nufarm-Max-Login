@@ -482,6 +482,12 @@ li > a:focus {
   src: local("☺"), url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype"), url("../fonts/Gotham-Medium.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url("../fonts/Gotham-Book.eot");
+  src: url("../fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book.woff") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.otf"), url("../fonts/Gotham-Book.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -571,6 +577,8 @@ html, body, .container-fluid {
 
 .bg {
   padding: 5% 0;
+  margin-bottom: 10%;
+  min-height: 600px;
   background-color: rgba(0, 0, 0, 0.6);
   -moz-background-color: rgba(0, 0, 0, 0.6);
   -webkit-background-color: rgba(0, 0, 0, 0.6);
@@ -742,14 +750,45 @@ html, body, .container-fluid {
 #box3.info-box {
   background-position: -90px 0px; }
 
+.form-top {
+  height: 75px;
+  background: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase; }
+  .form-top .confirm p {
+    float: left;
+    background: url("../images/icon-form.png") no-repeat 15px 15px;
+    padding-left: 75px;
+    font-size: 18px;
+    font-family: 'BrooklynSamuelsFive-Fat';
+    color: #009448;
+    display: block;
+    padding-top: 28px;
+    height: 75px; }
+    .form-top .confirm p span {
+      font-family: 'Gotham-Book';
+      font-size: 14px;
+      display: block; }
+  .form-top .points {
+    position: relative; }
+    .form-top .points p {
+      background: #8E3289;
+      position: absolute;
+      display: block;
+      width: 230px;
+      height: 115px;
+      padding: 15px 0;
+      text-align: center;
+      right: -10px; }
+      .form-top .points p span {
+        display: block; }
+
 .footer {
   height: 130px;
   background-image: url("../images/footer.png");
   background-size: cover;
   repeat: no-repeat;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: 0;

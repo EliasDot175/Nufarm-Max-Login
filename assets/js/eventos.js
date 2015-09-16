@@ -17,15 +17,15 @@ $(document).ready(function(){
 	});
 
 
- //   	 //footer
- //   	 $(window).resize(function() {
-	// 	var windowHeight = $(window).height();
-	// 	if(windowHeight > 1110){
-	// 		$('.footer').css('position', 'fixed');
-	// 	}else{
-	// 		$('.footer').css('position', 'relative');
-	// 	}
-	// });
+   	 //footer
+   	 $(window).resize(function() {
+		var windowHeight = $(window).height();
+		if(windowHeight > 900){
+			$('.footer').css('position', 'absolute');
+		}else{
+			$('.footer').css('position', 'fixed');
+		}
+	});
 
 	// var windowHeight = $(window).height();
 	// console.log(windowHeight);

@@ -1,5 +1,6 @@
 <?php include 'inc/header.php' ?>
-
+<div class="container-fluid" id="select">
+	
 	<div class="col-xs-12 head">
 		<div class="inner">
 			<div class="col-xs-6">

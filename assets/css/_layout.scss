@@ -84,7 +84,6 @@
          url('../fonts/Gotham-Light.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -97,6 +96,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.eot');
+    src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Gotham-Book.woff') format('woff2'),
+         url('../fonts/Gotham-Book.woff') format('woff'),
+         url('../fonts/Gotham-Book.otf'),
+         url('../fonts/Gotham-Book.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
@@ -140,7 +150,7 @@ $white: #FFF;
 $green: #5AAF7A;
 
 // backgrounds
-$white-bg: rgba(255, 255, 255, .2);;
+$white-bg: rgba(255, 255, 255, .2);
 $black-bg: rgba(0, 0, 0, .7);
 $verde : #78AC7A;
 
@@ -218,6 +228,8 @@ html, body, .container-fluid{
 // PANTALLA DE SELECT
 .bg{
 	padding: 5% 0;
+	margin-bottom: 10%;
+	min-height: 600px;
 	background-color: rgba(0, 0, 0, 0.6);
     -moz-background-color: rgba(0, 0, 0, 0.6);
     -webkit-background-color: rgba(0, 0, 0, 0.6);
@@ -441,15 +453,60 @@ html, body, .container-fluid{
 #box3.info-box{
 	background-position: -90px 0px;
 }
+// FORM SECTION
+.form-top{
+	height: 75px;
+	background: rgba(255, 255, 255, .6);
+	text-transform: uppercase;
 
+	.confirm{
+		p{
+			float: left;
+			background: url('../images/icon-form.png') no-repeat 15px 15px;
+			padding-left: 75px;
+			font-size: 18px;
+			font-family: 'BrooklynSamuelsFive-Fat';
+			color: #009448;
+			display: block;
+			padding-top: 28px;
+			height: 75px;
+
+			span{
+				font-family: 'Gotham-Book';
+				font-size: 14px;
+				display: block;
+			}
+		}	
+	}
+
+	.points{
+		position: relative;
+
+		p{
+			background: #8E3289;
+			position: absolute;
+			display: block;
+			width: 230px;
+			height: 115px;
+			padding: 15px 0;
+			text-align: center;
+			right: -10px;
+
+			span{
+				display: block;
+			}
+		}
+	}
+}
+
+// FOOTER
 .footer {
         height: 130px;
         background-image: url("../images/footer.png");
         background-size: cover;
         repeat: no-repeat;
         width: 100%;
-        position: absolute;
-        bottom: 0;
+        position: fixed;
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: 0;
