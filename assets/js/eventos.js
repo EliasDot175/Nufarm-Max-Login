@@ -1,56 +1,39 @@
-/* FUNCIONES*/
-
- function mostrar (elemento){
- 	ocultar();
- 	$('#info-col'+elemento).fadeIn('slow');
- 	$('#titulo-col'+elemento+'  .titulo').addClass('activo');
- 	$('#titulo-col'+elemento+' .link-cerrar').css('display', 'block');
- 	$('#titulo-col'+elemento+' .link-mostrar').css('display', 'none');
- 	$('#contenidoGeneral').removeClass('contenidoGeneral');	
-}
-
-
- function ocultar (){
- 	$('.columnasTitulo .titulo').removeClass('activo');
- 	$('.columnasInfo').css('display', 'none');
- 	$('.link-cerrar').css('display', 'none');
- 	$('.link-mostrar').css('display', 'block');
- 	$('#contenidoGeneral').addClass('contenidoGeneral');
-}
-
-
 $(document).ready(function(){
-	//mostrar item
-   	 $('.link-mostrar').click(function() {
-   	 	var elemento = $(this).attr('to');
-   	 	mostrar(elemento);
+	$('.info-box').hide();
+
+	$('.show-more').click(function(){
+		var element = $(this).parent('.login-box').attr('id');
+		$('#'+ element +'.info-box').slideDown(400);
+		$('.pre, .show-more, .goto').slideUp(250);
+		$('.login-box h3').not('#'+ element +'.login-box h3').css('opacity', '.6');
+		$('#'+ element +'.login-box .icon').css('opacity', '1');
 	});
 
-   	 //cerrar item
-   	 $('.link-cerrar').click(function() {
-   	 	ocultar();
-   	 	var elemento = $(this).attr('to');
-   	 	$('#titulo-col'+elemento+' .link-mostrar').css('display', 'block');
-   	 	$('.columnasTitulo .titulo').addClass('activo');
+	$('.show-less').click(function(){
+		$('.info-box').slideUp(250);
+		$('.pre, .show-more, .goto').slideDown(400);
+		$('.login-box h3').css('opacity', '1');
+		$('.login-box .icon').css('opacity', '.4');
 	});
 
-   	 //footer
-   	 $(window).resize(function() {
-		var windowHeight = $(window).height();
-		if(windowHeight > 1110){
-			$('.footer').css('position', 'fixed');
-		}else{
-			$('.footer').css('position', 'relative');
-		}
-	});
 
-	var windowHeight = $(window).height();
-	console.log(windowHeight);
-	if(windowHeight > 1110){
-		$('.footer').css('position', 'fixed');
-	}else{
-		$('.footer').css('position', 'relative');
-	}
+ //   	 //footer
+ //   	 $(window).resize(function() {
+	// 	var windowHeight = $(window).height();
+	// 	if(windowHeight > 1110){
+	// 		$('.footer').css('position', 'fixed');
+	// 	}else{
+	// 		$('.footer').css('position', 'relative');
+	// 	}
+	// });
+
+	// var windowHeight = $(window).height();
+	// console.log(windowHeight);
+	// if(windowHeight > 1110){
+	// 	$('.footer').css('position', 'fixed');
+	// }else{
+	// 	$('.footer').css('position', 'relative');
+	// }
 
 });
 

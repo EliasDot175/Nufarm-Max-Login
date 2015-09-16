@@ -384,6 +384,9 @@ h1, h2, h3, h4, h5, p {
   padding-left: 0px;
   padding-right: 0px; }
 
+a:hover {
+  text-decoration: none; }
+
 ul, li {
   text-decoration: none;
   list-style: none;
@@ -510,8 +513,12 @@ body {
   padding-top: 0px;
   padding-bottom: 0px; }
 
+html, body, .container-fluid {
+  height: 100%; }
+
 .login-top {
   max-width: 600px;
+  min-width: 500px;
   width: 100%;
   padding: 50px 120px;
   margin: 20% auto 0; }
@@ -522,12 +529,13 @@ body {
   width: 100%;
   padding: 40px 120px;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  min-width: 500px; }
   .login-dialog label {
     float: left;
     width: 100%;
     margin-top: 5px;
-    font-family: 'BrooklynSamuelsFive-Fat';
+    font-family: 'BrooklynSamuelsFive-Bold';
     color: #FFF;
     text-transform: uppercase;
     text-align: center; }
@@ -553,7 +561,7 @@ body {
     margin-top: 20px; }
     .login-dialog .btn button {
       background: #5AAF7A;
-      font-family: 'BrooklynSamuelsFive-Fat';
+      font-family: 'BrooklynSamuelsFive-Bold';
       border: 0;
       color: #FFF;
       font-size: 15px;
@@ -561,9 +569,8 @@ body {
       line-height: 40px;
       text-transform: uppercase; }
 
-.container-fluid {
-  padding-bottom: 5%;
-  margin-bottom: 5%;
+.bg {
+  padding: 5% 0;
   background-color: rgba(0, 0, 0, 0.6);
   -moz-background-color: rgba(0, 0, 0, 0.6);
   -webkit-background-color: rgba(0, 0, 0, 0.6);
@@ -584,9 +591,8 @@ body {
   width: 100%; }
 
 .top-menu {
-  background: rgba(0, 0, 0, 0.2);
-  height: 40px;
-  margin-bottom: 120px; }
+  background: rgba(0, 0, 0, 0.7);
+  height: 40px; }
   .top-menu a {
     color: #FFF;
     font-size: 12px;
@@ -605,20 +611,30 @@ body {
 .inner .login-box {
   display: table;
   padding-right: 40px; }
+  .inner .login-box:hover .icon {
+    opacity: 1; }
   .inner .login-box .icon {
     display: block;
     padding: 0 40px 40px 0;
-    text-align: center; }
+    text-align: center;
+    opacity: .4;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
   .inner .login-box h3 {
-    border-left: 2px solid #fff;
     font-size: 27px;
     height: 57px;
     line-height: 30px;
     color: #fff;
-    padding-left: 10px;
     font-family: 'BrooklynSamuelsFive-Fat';
     margin-bottom: 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
     .inner .login-box h3 .de {
       font-size: 20px;
       position: relative;
@@ -633,7 +649,7 @@ body {
     line-height: 16px;
     padding-right: 40px; }
   .inner .login-box a {
-    font-family: 'BrooklynSamuelsFive-Fat';
+    font-family: 'BrooklynSamuelsFive-Bold';
     text-transform: uppercase; }
   .inner .login-box a.show-more {
     width: 100%;
@@ -662,14 +678,30 @@ body {
     background: rgba(255, 255, 255, 0.2);
     float: left;
     height: 40px;
-    line-height: 50px;
+    line-height: 44px;
     font-size: 15px;
     color: #FFF;
     text-align: center;
     width: 100%; }
 .inner .info-box {
-  padding-top: 10px;
-  border-top: 1px solid #FFF; }
+  background: url("../images/infobox-bg.png") no-repeat;
+  padding-top: 20px;
+  position: relative; }
+  .inner .info-box .show-less {
+    position: absolute;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'BrooklynSamuelsFive-Bold';
+    opacity: .6;
+    right: -20px;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .inner .info-box .show-less:hover {
+      text-decoration: none !important;
+      opacity: 1; }
   .inner .info-box p {
     color: #FFF;
     display: block;
@@ -688,26 +720,35 @@ body {
   .inner .info-box img {
     display: block;
     float: right; }
-  .inner .info-box .goto {
+  .inner .info-box .enter {
     background: rgba(255, 255, 255, 0.2);
     float: left;
     height: 40px;
-    line-height: 50px;
+    line-height: 44px;
     font-size: 15px;
-    font-family: 'BrooklynSamuelsFive-Fat';
+    font-family: 'BrooklynSamuelsFive-Bold';
     text-transform: uppercase;
     margin-top: 20px;
     color: #FFF;
     text-align: center;
     width: 100%; }
 
+#box1.info-box {
+  background-position: -650px 0px; }
+
+#box2.info-box {
+  background-position: -388px 0px; }
+
+#box3.info-box {
+  background-position: -90px 0px; }
+
 .footer {
   height: 130px;
   background-image: url("../images/footer.png");
   background-size: cover;
   repeat: no-repeat;
-  position: fixed;
   width: 100%;
+  position: absolute;
   bottom: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -730,47 +771,13 @@ body {
 /* RESPONSIVE  */
 /*mobile--------------------------------------------------*/
 @media screen and (min-width: 0px) and (max-width: 767px) {
-  .base {
-    padding: 0 20px;
-    box-sizing: border-box; }
-
-  .base .contenido {
-    width: 100%; }
-
   .footer {
-    position: relative !important;
     padding-top: 40px !important; }
 
   .footer img {
-    margin-top: 0px; }
-
-  .contenedor {
-    padding-bottom: 50px; }
-
-  .base .contenido {
-    left: 0;
-    margin-left: 0;
-    padding: 40px 0; }
-
-  .contenidoGeneral {
-    padding: 40px 0 !important; } }
+    margin-top: 0px; } }
 /*tablet----------------------------------------*/
 /**  TABLETS LANDSCAPE **/
-@media screen and (min-width: 771px) and (max-width: 980px) {
-  .base {
-    padding: 0 20px;
-    box-sizing: border-box; }
-
-  .base .contenido {
-    width: 100%; }
-
-  .base .contenido {
-    left: 0;
-    margin-left: 0;
-    padding: 40px 0; }
-
-  .contenidoGeneral {
-    padding: 40px 0 !important; } }
 /*notbook------------------------------------*/
 /*desktop------------------------------*/
 /*desktop large-----------------------------------------------*/

@@ -1,6 +1,6 @@
 <?php include 'inc/header.php' ?>
 
-<div class="container" id="login">
+<div class="container-fluid" id="login">
 
 	<div class="login-top">
 		<img src="assets/images/logo-white.png" id="Nufarm" title="Nufarm" alt="Imagen no encontrada">

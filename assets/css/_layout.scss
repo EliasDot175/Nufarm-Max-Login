@@ -141,12 +141,17 @@ $green: #5AAF7A;
 
 // backgrounds
 $white-bg: rgba(255, 255, 255, .2);;
-$black-bg: rgba(0, 0, 0, .2);
+$black-bg: rgba(0, 0, 0, .7);
 $verde : #78AC7A;
+
+html, body, .container-fluid{
+	height: 100%;
+}
 
 // LOGIN BOX
 .login-top{
 	max-width: 600px;
+	min-width: 500px;
 	width: 100%;
 	padding: 50px 120px;
 	margin: 20% auto 0;
@@ -159,12 +164,13 @@ $verde : #78AC7A;
 	padding: 40px 120px;
 	margin: 0 auto;
 	overflow: hidden;
+	min-width: 500px;
 
 		label{
 			float: left;
 			width: 100%;
 			margin-top: 5px;
-			font-family: 'BrooklynSamuelsFive-Fat';
+			font-family: 'BrooklynSamuelsFive-Bold';
 			color: $white;
 			text-transform: uppercase;
 			text-align: center;
@@ -197,7 +203,7 @@ $verde : #78AC7A;
 			
 			button{
 				background: $green;
-				font-family: 'BrooklynSamuelsFive-Fat';
+				font-family: 'BrooklynSamuelsFive-Bold';
 				border: 0;
 				color: $white;
 				font-size: 15px;
@@ -210,9 +216,8 @@ $verde : #78AC7A;
 }
 
 // PANTALLA DE SELECT
-.container-fluid{
-	padding-bottom: 5%;
-	margin-bottom: 5%;
+.bg{
+	padding: 5% 0;
 	background-color: rgba(0, 0, 0, 0.6);
     -moz-background-color: rgba(0, 0, 0, 0.6);
     -webkit-background-color: rgba(0, 0, 0, 0.6);
@@ -240,7 +245,6 @@ $verde : #78AC7A;
 .top-menu{
 	background: $black-bg;
 	height: 40px;
-	margin-bottom: 120px;
 
 	a{
 		color: $white;
@@ -268,22 +272,34 @@ $verde : #78AC7A;
 		display: table;
 		padding-right: 40px;
 
+		&:hover .icon{
+			opacity: 1;
+		}
+
 		.icon{
 			display: block;
 			padding:0 40px 40px 0;
 			text-align: center;
+			opacity: .4;
+			-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 		}
 
 		h3{
-			border-left: 2px solid #fff;
 			font-size: 27px;
 			height: 57px;
 			line-height: 30px;
 			color: #fff;
-			padding-left: 10px;
 			font-family: 'BrooklynSamuelsFive-Fat';
 			margin-bottom: 20px;
 			text-transform: uppercase;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 
 			.de{
 	            font-size: 20px;
@@ -306,9 +322,10 @@ $verde : #78AC7A;
         }
 
         a{
-        	font-family: 'BrooklynSamuelsFive-Fat';
+        	font-family: 'BrooklynSamuelsFive-Bold';
         	text-transform: uppercase;
         }
+
         a.show-more{
         	width: 100%;
         	float: left;
@@ -342,7 +359,7 @@ $verde : #78AC7A;
         	background: $white-bg;
         	float: left;
         	height: 40px;
-        	line-height: 50px;
+        	line-height: 44px;
         	font-size: 15px;
         	color: $white;
         	text-align: center;
@@ -351,8 +368,28 @@ $verde : #78AC7A;
 	}
 
 	.info-box{
-		padding-top: 10px;
-		border-top: 1px solid $white;
+		background: url('../images/infobox-bg.png') no-repeat;
+		padding-top: 20px;
+		position: relative;
+
+		.show-less{
+			position: absolute;
+			color: $white;
+			font-size: 14px;
+			font-family: 'BrooklynSamuelsFive-Bold';
+			opacity: .6;
+			right: -20px;
+        	-webkit-transition: all 0.25s ease-in-out;
+			-moz-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+
+			&:hover{
+				text-decoration: none !important;
+				opacity: 1;
+			}
+		}
 
 		p{
 			color: $white;
@@ -378,13 +415,13 @@ $verde : #78AC7A;
 			float: right;
 		}
 
-		.goto{
+		.enter{
 			background: $white-bg;
         	float: left;
         	height: 40px;
-        	line-height: 50px;
+        	line-height: 44px;
         	font-size: 15px;
-        	font-family: 'BrooklynSamuelsFive-Fat';
+        	font-family: 'BrooklynSamuelsFive-Bold';
         	text-transform: uppercase;
         	margin-top: 20px;
         	color: $white;
@@ -394,14 +431,24 @@ $verde : #78AC7A;
 	}
 }
 
+#box1.info-box{
+	background-position: -650px 0px;
+}
+
+#box2.info-box{
+	background-position: -388px 0px;
+}
+#box3.info-box{
+	background-position: -90px 0px;
+}
 
 .footer {
         height: 130px;
         background-image: url("../images/footer.png");
         background-size: cover;
         repeat: no-repeat;
-        position: fixed;
         width: 100%;
+        position: absolute;
         bottom: 0;
         background-repeat: no-repeat;
         background-position: center;
@@ -431,37 +478,13 @@ $verde : #78AC7A;
 
 /*mobile--------------------------------------------------*/
 @media screen and (min-width: 0px) and (max-width : 767px){
-    .base {
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    .base .contenido {
-        width: 100%;
-    }
-
     .footer {
-            position: relative !important;
             padding-top: 40px !important;
     }
 
     .footer img {
         margin-top: 0px;
     }
-
-    .contenedor {
-                   padding-bottom:50px;
-        }
- 
-    .base .contenido {
-        left: 0;
-        margin-left: 0;
-        padding: 40px 0;
-    }
-
-        .contenidoGeneral {
-    padding: 40px 0 !important;
-}
 
 }
 
@@ -473,26 +496,6 @@ $verde : #78AC7A;
 
 /**  TABLETS LANDSCAPE **/
 @media screen and (min-width: 771px) and (max-width : 980px){
-    .base {
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        .base .contenido {
-            width: 100%;
-        }
-
-    .base .contenido {
-        left: 0;
-        margin-left: 0;
-        padding: 40px 0;
-    }
-
-    .contenidoGeneral {
-    padding: 40px 0 !important;
-}
-        
-
 
 }
 
