@@ -527,7 +527,7 @@ html, body, .container-fluid {
   min-width: 500px;
   width: 100%;
   padding: 50px 120px;
-  margin: 20% auto 0; }
+  margin: 5% auto 0; }
 
 .login-dialog {
   background-color: rgba(0, 141, 69, 0.3);
