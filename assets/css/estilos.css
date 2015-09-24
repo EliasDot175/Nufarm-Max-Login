@@ -530,7 +530,15 @@ html, body, .container-fluid {
   margin: 5% auto 0; }
 
 .login-dialog {
-  background-color: rgba(0, 141, 69, 0.3);
+  background: -moz-linear-gradient(0% 50% 0deg, #009448 22.09%, rgba(0, 148, 72, 0.36) 73.01%, #009448 94.48%);
+  background: -webkit-linear-gradient(0deg, #009448 22.09%, rgba(0, 148, 72, 0.36) 73.01%, #009448 94.48%);
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0.2209, #009448), color-stop(0.7301, rgba(0, 148, 72, 0.36)), color-stop(0.9448, #009448));
+  background: -o-linear-gradient(0deg, #009448 22.09%, rgba(0, 148, 72, 0.36) 73.01%, #009448 94.48%);
+  background: -ms-linear-gradient(0deg, #009448 22.09%, rgba(0, 148, 72, 0.36) 73.01%, #009448 94.48%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#009448', endColorstr='#009448' ,GradientType=0)";
+  background: linear-gradient(90deg, #009448 22.09%, rgba(0, 148, 72, 0.36) 73.01%, #009448 94.48%);
+  opacity: 0.75;
+  filter: alpha(opacity=75) progid:DXImageTransform.Microsoft.Alpha(opacity=75) progid:DXImageTransform.Microsoft.gradient(startColorstr='#009448',endColorstr='#009448' , GradientType=1);
   max-width: 600px;
   width: 100%;
   padding: 40px 120px;
@@ -552,7 +560,7 @@ html, body, .container-fluid {
     width: 96%;
     padding: 2%;
     border: 0;
-    background: rgba(0, 148, 72, 0.4); }
+    background: rgba(0, 0, 0, 0.2); }
   .login-dialog p {
     float: left;
     font-size: 15px;
